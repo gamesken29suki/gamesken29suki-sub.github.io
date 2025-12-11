@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Google Analytics with Consent Mode -->
+    <!-- Google Analytics: 以下のIDを実際の測定ID (G-XXXXXXXXXX) に置き換えてください -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ3TTG632J</script>
     <script>
         // 同意情報をlocalStorageから取得、なければデフォルトを使用
         const savedConsent = localStorage.getItem('analytics-consent');
@@ -41,11 +42,7 @@
         // 初期同意設定
         gtag('consent', 'default', consentSettings);
         gtag('js', new Date());
-        
-        // Google Analytics設定（ID: G-CJ3TTG632J）
-        gtag('config', 'G-CJ3TTG632J', {
-            'anonymize_ip': true
-        });
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ3TTG632J"></script>
 </head>
