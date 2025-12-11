@@ -187,43 +187,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
 
-    <!-- Cookie同意バナー -->
-    <div id="consentBanner" class="consent-banner" style="display: none;">
+    <!-- Sirdata CMP フォールバック同意バナー -->
+    <div id="fallbackConsentBanner" class="consent-banner fallback-banner" style="display: none;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8">
                     <p class="mb-0">
                         このサイトは、ユーザー体験を向上させるためにGoogle Analyticsを使用しています。
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" class="text-decoration-none">プライバシーポリシー</a>
+                        <a href="/privacy-policy.html" class="text-decoration-none">プライバシーポリシー</a>
                     </p>
                 </div>
                 <div class="col-md-4 text-md-end mt-2 mt-md-0">
-                    <button id="acceptConsent" class="btn btn-sm btn-primary me-2">すべて許可</button>
-                    <button id="rejectConsent" class="btn btn-sm btn-secondary">拒否</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- プライバシーポーダル -->
-    <div class="modal fade" id="privacyModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">データ利用について</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <h6>Google Analytics</h6>
-                    <p>Google Analyticsは、ウェブサイトのアクセス統計情報を収集・分析するためのツールです。収集されたデータはGoogleのプライバシーポリシーに従って処理されます。</p>
-                    <ul>
-                        <li><strong>analytics_storage</strong>: ウェブサイト分析のためのクッキーの保存を許可します</li>
-                        <li><strong>ad_storage</strong>: 広告配信関連のクッキーの保存を許可します</li>
-                    </ul>
-                    <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleのプライバシーポリシー</a></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                    <button id="fallbackAcceptConsent" class="btn btn-sm btn-primary me-2">すべて許可</button>
+                    <button id="fallbackRejectConsent" class="btn btn-sm btn-secondary">拒否</button>
                 </div>
             </div>
         </div>

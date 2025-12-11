@@ -55,6 +55,10 @@ footer a{opacity:.95}
   box-shadow:0 -2px 20px rgba(0,0,0,0.3);
   animation:slideUp 0.3s ease-out;
 }
+.consent-banner.fallback-banner{
+  background:linear-gradient(135deg,#374151 0%,#1f2937 100%);
+  border-top:1px solid rgba(107,114,128,0.3);
+}
 @keyframes slideUp{
   from{transform:translateY(100%);opacity:0}
   to{transform:translateY(0);opacity:1}
