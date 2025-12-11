@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded',()=>{
+  // =========== Google Analytics 同意管理 ===========
+  const consentBanner = document.getElementById('consentBanner');
+  const acceptBtn = document.getElementById('acceptConsent');
+  const rejectBtn = document.getElementById('rejectConsent');
+  
+  // 以前の同意情報をチェック
+  if(!localStorage.getItem('analytics-consent')){
+    consentBanner.style.display = 'block';
+  }
+  
+  // 同意を許可
+  acceptBtn.addEventListener('click',()=>{
+    const consentData = {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted'
+    };
+    localStorage.setItem('analytics-consent', JSON.stringify(consentData));
+    gtag('consent', 'update', consentData);
+    consentBanner.style.display = 'none';
+  });
+  
+  // 同意を拒否
+  rejectBtn.addEventListener('click',()=>{
+    const consentData = {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied'
+    };
+    localStorage.setItem('analytics-consent', JSON.stringify(consentData));
+    gtag('consent', 'update', consentData);
+    consentBanner.style.display = 'none';
+  });
+
   // GSAP: ヘッダーとセクションの簡易フェードイン
 if(window.gsap){
     gsap.from('.hero .display-4',{y:30,opacity:0,duration:0.8,delay:0.2});
